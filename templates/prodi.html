@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+{% block title %} Prodi {% endblock %}
+{% block content %}
+    <h1>Prodi</h1>
+    ini halaman prodi
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Prodi</th>
+            <th scope="col">Fakultas</th>
+            <th scope="col">UKT</th>
+          </tr>
+        </thead>
+        <tbody>
+            
+            <tr>{% for data in prodi %}
+                <td>{{ data.nama }}</td>
+                <td>{{ data.fakultas }}</td>
+                <td>{{ data.ukt }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+{% endblock %}
